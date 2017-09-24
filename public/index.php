@@ -85,15 +85,12 @@ $page = new \PHP\Gcov\Navigation($func ?? null, $config['versions'][$version] ??
 
 <nav id="head-nav" class="navbar navbar-fixed-top">
     <div class="navbar-inner clearfix">
-        <a href="/" class="brand"><img src="http://php.net/images/logos/php-logo.svg" width="48" height="24" alt="php"></a>
+        <a href="index.php" class="brand" style="position: relative;">
+            <img src="http://php.net/images/logos/php-logo.svg" width="48" height="24" alt="php"><span style="position: absolute; color: #E2E4EF;">gcov</span>
+        </a>
         <div id="mainmenu-toggle-overlay"></div>
         <input type="checkbox" id="mainmenu-toggle">
-        <ul class="nav">
-            <li<?php if (null === $version) {
-                echo ' class="active"';
-            } ?>>
-                <a href="index.php">Home</a>
-            </li>
+        <ul class="nav" style="margin-left: 30px;">
             <?php
             foreach ($config['versions'] as $url => $supportedVersion):
                 ?>
@@ -106,6 +103,10 @@ $page = new \PHP\Gcov\Navigation($func ?? null, $config['versions'][$version] ??
             endforeach;
             ?>
         </ul>
+        <form class="navbar-search" id="topsearch" action="http://php.net/search.php">
+            <input type="hidden" name="show" value="quickref">
+            <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+        </form>
     </div>
     <div id="flash-message"></div>
 </nav>
