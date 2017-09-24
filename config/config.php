@@ -45,7 +45,7 @@ return [
         'expected_tests' => 'Expected Test Failures',
         'valgrind' => 'Valgrind',
         'skip' => 'Skipped Tests',
-        'test_functions' => 'Tested Functions',
+        'tested_functions' => 'Tested Functions',
         'system' => 'System',
     ],
 
