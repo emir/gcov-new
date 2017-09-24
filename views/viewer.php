@@ -1,0 +1,1 @@
+<h2 id="content-title"><?php echo $page->getHead(); ?></h2>
